@@ -1,0 +1,95 @@
+/* estilo formulario */
+.card {
+    width: 90%;
+    height: auto;
+
+    margin-left: 5%;
+    margin-bottom: 2%;
+    padding-top: 30px;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #34d288;
+}
+
+form {
+    padding: 20px;
+    border-top: 2px solid #34d288;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="radio"],
+input[type="checkbox"],
+input[type="submit"],
+input[type="reset"] {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.bt {
+    padding: 10px 20px;
+    border: none;
+    background-color: #34d288;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bt-limpar {
+    padding: 10px 20px;
+    border: none;
+    background-color: #d2c834;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bt-limpar:hover {
+    background-color: #898706;
+
+}
+
+.bt:hover {
+    background-color: #049942;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #34d288;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#resultado img {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

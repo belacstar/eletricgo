@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" href="../images/icons/sobre.ico" type="image/x-icon">
+  <title>Sobre</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="../css/sobre.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+</head>
+
+<body>
+  <header class="header has-background-black is-uppercase has-text-weight-medium has-text-white">
+    <div class="nav-header">
+      <a href="../index.html" class="logo">
+        <img class="logo-original" src="../images/logo_eletricgo-rmvback.png" alt="Logo EletricGo">
+        <img class="logo-alternate" src="../images/logo-eg-removebg-preview.png" alt="Logo EletricGo">
+      </a>
+      <a class="nav-item" href="../index.html">
+        Home
+      </a>
+
+      <a class="nav-item" href="tabela.html"> Tabela</a>
+
+      <a class="nav-item" href="grid.html">
+        Grid
+      </a>
+
+      <a class="nav-item" href="formulario.html">
+        Formulário
+      </a>
+
+      <a class="nav-item" href="./mapasClicaveis.html">
+        Mapas Clicáveis
+      </a>
+
+      <a class="nav-item" href="./landingPage.html">
+        Landing Page
+      </a>
+
+      <div class="btn-register-login">
+        <div class="buttons">
+          <button class="button is-primary has-text-white" id="open-modal">CADASTRAR</button>
+          <div id="fade" class="hide"></div>
+          <div id="modal" class="hide" style="background-color: lightgray;">
+            <div class="btn-close-modal-registrar">
+              <button id="close-modal"><img class="fechar-modal-img" src="../images/icons/close.png"
+                  alt="Botão fechar"></button>
+            </div>
+            <form action="#" method="get" target="_self">
+              <div class="modal-body">
+                <div class="field">
+                  <label class="label">Nome e sobrenome</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Digite nome e sobrenome">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Nome de usuário</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Digite o nome do usuário">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="password">
+                  <label class="label">Senha</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="password" placeholder="Digite sua senha" id="password">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <div id="icon" onclick="showHide()"></div>
+
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label" style="margin-top:12px;">Email</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="email" placeholder="Digite o email para cadastro">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field has-text-dark">
+                  <label class="checkbox">
+                    <div class="checkbox-termos">
+
+                      <input type="checkbox">
+                      <h5>ACEITO RECEBER EMAIL COM NEWSLETTER SOBRE O SITE. ESTOU DE ACORDO COM A POLÍTICA DE COOKIES.
+                      </h5>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="field is-grouped is-justify-content-center">
+                  <div class="control">
+                    <button class="button is-link">Cadastrar</button>
+                  </div>
+                  <div class="control">
+                    <button class="button is-link is-light" onclick="fecharFormulario()">Cancelar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <button class="button has-background-link-light has-text-white" id="open-login-modal">LOGIN</button>
+          <div id="fade-login" class="hide-login"></div>
+          <div id="modal-login" class="hide-login" style="background-color: lightgray;">
+            <div class="btn-close-modal-logar">
+              <button id="close-login-modal"><img class="fechar-modal-img" src="../images/icons/close.png"
+                  alt="Botão fechar"></button>
+            </div>
+            <form action="#" method="get" target="_self">
+              <div class="modal-body">
+                <div class="field">
+                  <label class="label">Nome de usuário</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Digite o nome do usuário">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="password">
+                  <label class="label">Senha</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="password" placeholder="Digite sua senha" id="password-login">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <div id="icon-login" onclick="showHideLogin()">
+                    </div>
+
+
+                  </div>
+                </div>
+
+                <div class="field is-grouped is-justify-content-center" style="margin-top: 15px;">
+                  <div class="control">
+                    <button class="button is-link">Login</button>
+                  </div>
+                  <div class="control">
+                    <button class="button is-link is-light" onclick="fecharFormularioLogin()">Cancelar</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="input-mudar-tema">
+    <input type="checkbox" class="checkbox-mudar-tema" id="chk" />
+
+    <label class="label-mudar-tema" for="chk">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+      <div class="ball"></div>
+    </label>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+  </div>
+
+  <div class="titulo-sobre">
+    <h1>SOBRE A<img src="../images/eg-logo-removebg-preview.png" alt="Logo EletricGo"
+        style="width: 200px; height: auto;"></h1>
+  </div>
+  <section class="sobre-section">
+    <div class="card">
+
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="../images/felipe.jpeg" alt="Foto Felipe" />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">Felipe de Sousa</p>
+            <p class="subtitle is-6 mt-2">@fp.sousamg</p>
+          </div>
+        </div>
+
+        <div class="content">
+          Felipe de Sousa, 18 anos, técnico em informática pelo IFMG e graduando Ciências da Computação na FUMEC, sempre
+          fui muito apaixonado por tecnologia desde pequeno. Passei grande parte da minha vida querendo atuar na área,
+          hoje estou estudando para poder me tornar feliz trabalhando com o que eu gosto.
+          <br>
+          <br>
+          <a href="https://github.com/ilipehwd" target="_blank"><img src="../images/icons/github.svg" alt="Git Hub"
+              style="width: 20px;"> https://github.com/ilipehwd</a>
+          <br>
+          <br>
+          <a href="https://www.linkedin.com/in/fpsousamg/" target="_blank"><img src="../images/icons/linkedin.svg"
+              alt="linkedin" style="width: 20px;"> https://www.linkedin.com/in/fpsousamg/</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="../images/isabela.jpeg" alt="Foto Isabela" />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">Isabela Camara</p>
+            <p class="subtitle is-6 mt-2">@bela.streamer</p>
+          </div>
+        </div>
+
+        <div class="content">
+          Isabela Camara, formada em administração e cursando ciência da computação. Sempre amei a tecnologia mas achava
+          que precisava ser um gênio para trabalhar com a área. Me descobrindo a cada dia que passa no mundo da TI e
+          muito feliz com a escolha. Empreendedora e apaixonada pelos animais.
+          <br>
+          <br>
+          <a href="https://github.com/belacstar" target="_blank"><img src="../images/icons/github.svg" alt="Git Hub"
+              style="width: 20px;"> https://github.com/belacstar</a>
+          <br>
+          <br>
+          <a href="https://www.linkedin.com/in/isabela-camara-/" target="_blank"><img src="../images/icons/linkedin.svg"
+              alt="linkedin" style="width: 20px;"> https://www.linkedin.com/in/isabela-camara-/</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="../images/italo.jpeg" alt="Foto Ítalo" />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">Ítalo Eduardo</p>
+            <p class="subtitle is-6 mt-2">@italoeduardo.10</p>
+          </div>
+        </div>
+
+        <div class="content">
+          Italo Eduardo e tenho 18 anos. Sou estudante da FUMEC, onde estou cursando Ciência da Computação. Desde jovem,
+          gosto do mundo da tecnologia , da programação e da matemática. A cada dia me identifico e fico mais feliz com
+          este curso.
+          <br>
+          <br>
+          <a href="https://github.com/Italoeduardo10" target="_blank"><img src="../images/icons/github.svg"
+              alt="Git Hub" style="width: 20px;"> https://github.com/Italoeduardo10</a>
+          <br>
+          <br>
+
+          <a href="http://linkedin.com/in/italoeduardossilva" target="_blank"><img src="../images/icons/linkedin.svg"
+              alt="linkedin" style="width: 20px;"> http://linkedin.com/in/italoeduardossilva</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="../images/lucas.jpeg" alt="Foto Lucas" />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">Lucas Fernandes</p>
+          </div>
+        </div>
+
+        <div class="content">
+          Me chamo lucas, sou estudante de ciência da computação, desde novo sou apaixonado pela área de computação e da
+          tecnologia, pra mim, cursar essa área, é um sonho realizado.
+          <br>
+          <br>
+          <a href="https://github.com/LF031" target="_blank"><img src="../images/icons/github.svg" alt="Git Hub"
+              style="width: 20px;"> https://github.com/LF031</a>
+          <br>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="../images/natalia.jpeg" alt="Foto Natália" />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">Natália Rocha</p>
+            <p class="subtitle is-6 mt-2">@nataliarochab_</p>
+          </div>
+        </div>
+
+        <div class="content">
+          Meu nome é Natália e tenho 25 anos. Eu fazia Administração, mas não estava me sentindo realizada e resolvi
+          olhar outro curso, escolhi Ciência da Computação por ser um curso interessante e em alta no mercado. Estou
+          gostando muito dessa mudança e feliz pela escolha que fiz.
+          <br>
+          <br>
+          <a href="https://github.com/nataliarochab" target="_blank"><img src="../images/icons/github.svg" alt="Git Hub"
+              style="width: 20px;"> https://github.com/nataliarochab</a>
+          <br>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <footer class="footer has-background-black has-text-white">
+    <div class="content has-text-centered">
+      <p>
+        <strong class="has-text-primary">Eletric GO</strong> por Felipe Mendes, Isabela Câmara, Lucas Fernandes, Natália
+        Rocha e Ítalo Eduardo.<br>
+        O código fonte é licenciado por MIT. O conteúdo do site é
+        licenciado por
+        <strong class="has-text-primary">BYTA BUG LTDA</strong>.
+      </p>
+      <div class="centralizar-botao-sobre">
+        <a class="sobre-link" href="sobre.html">
+          <img src="../images/sobre-removebg-preview.png" alt="Botão Sobre" style="width: 100px; height: 40px;">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const chk = document.getElementById('chk');
+
+    chk.addEventListener('change', () => {
+      document.body.classList.toggle('grey')
+    });
+    const changeLogo = () => {
+      const logosOriginal = document.querySelectorAll('.logo-original');
+      const logosAlternate = document.querySelectorAll('.logo-alternate');
+      const mq = window.matchMedia('(max-width: 750px)');
+
+      const changeLogo = () => {
+        if (mq.matches) {
+          logosOriginal.forEach(logo => logo.style.display = 'none');
+          logosAlternate.forEach(logo => logo.style.display = 'block');
+        } else {
+          logosOriginal.forEach(logo => logo.style.display = 'block');
+          logosAlternate.forEach(logo => logo.style.display = 'none');
+        }
+      };
+
+      changeLogo();
+
+      mq.addEventListener('change', changeLogo);
+    };
+
+    changeLogo();
+
+    // Função para abrir e fechar o modal de registro
+    const toggleRegisterModal = () => {
+      const modal = document.querySelector("#modal");
+      const fade = document.querySelector("#fade");
+      [modal, fade].forEach((el) => el.classList.toggle("hide"));
+    };
+
+    // Função para mostrar e ocultar a senha no modal de registro
+    const togglePasswordVisibility = () => {
+      const password = document.getElementById('password');
+      const icon = document.getElementById('icon');
+      if (password.type === 'password') {
+        password.setAttribute('type', 'text');
+        icon.classList.add('hide');
+      } else {
+        password.setAttribute('type', 'password');
+        icon.classList.remove('hide');
+      }
+    };
+
+    // Função para fechar o modal de registro
+    const closeRegisterModal = () => {
+      const modal = document.querySelector("#modal");
+      const fade = document.querySelector("#fade");
+      [modal, fade].forEach((el) => el.classList.add("hide"));
+    };
+
+    // Função para abrir e fechar o modal de login
+    const toggleLoginModal = () => {
+      const modalLogin = document.querySelector("#modal-login");
+      const fadeLogin = document.querySelector("#fade-login");
+      [modalLogin, fadeLogin].forEach((el) => el.classList.toggle("hide-login"));
+    };
+
+    // Função para mostrar e ocultar a senha no modal de login
+    const toggleLoginPasswordVisibility = () => {
+      const passwordLogin = document.getElementById('password-login');
+      const iconLogin = document.getElementById('icon-login');
+      if (passwordLogin.type === 'password') {
+        passwordLogin.setAttribute('type', 'text');
+        iconLogin.classList.add('hide');
+      } else {
+        passwordLogin.setAttribute('type', 'password');
+        iconLogin.classList.remove('hide');
+      }
+    };
+
+    // Função para fechar o modal de login
+    const closeLoginModal = () => {
+      const modalLogin = document.querySelector("#modal-login");
+      const fadeLogin = document.querySelector("#fade-login");
+      [modalLogin, fadeLogin].forEach((el) => el.classList.add("hide-login"));
+    };
+
+    // Event Listeners
+    document.querySelector("#open-modal").addEventListener("click", toggleRegisterModal);
+    document.querySelector("#close-modal").addEventListener("click", closeRegisterModal);
+    document.querySelector("#icon").addEventListener("click", togglePasswordVisibility);
+
+    document.querySelector("#open-login-modal").addEventListener("click", toggleLoginModal);
+    document.querySelector("#close-login-modal").addEventListener("click", closeLoginModal);
+    document.querySelector("#icon-login").addEventListener("click", toggleLoginPasswordVisibility);
+
+  </script>
+</body>
+
+</html>

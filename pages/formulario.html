@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" href="../images/icons/form_icon.ico" type="image/x-icon">
+  <title>Quiz: Qual modelo de carro elétrico combina com você?</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="../css/formulario.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+</head>
+
+<body>
+
+  <header class="header has-background-black is-uppercase has-text-weight-medium has-text-white">
+    <div class="nav-header">
+      <a href="../index.html" class="logo">
+        <img class="logo-original" src="../images/logo_eletricgo-rmvback.png" alt="Logo EletricGo">
+        <img class="logo-alternate" src="../images/logo-eg-removebg-preview.png" alt="Logo EletricGo">
+      </a>
+      <a class="nav-item" href="../index.html">
+        Home
+      </a>
+
+      <a class="nav-item" href="tabela.html"> Tabela</a>
+
+      <a class="nav-item" href="grid.html">
+        Grid
+      </a>
+
+      <a class="nav-item" href="formulario.html">
+        Formulário
+      </a>
+
+      <a class="nav-item" href="./mapasClicaveis.html">
+        Mapas Clicáveis
+      </a>
+
+      <a class="nav-item" href="./landingPage.html">
+        Landing Page
+      </a>
+
+      <div class="btn-register-login">
+        <div class="buttons">
+          <button class="button is-primary has-text-white" id="open-modal">CADASTRAR</button>
+          <div id="fade" class="hide"></div>
+          <div id="modal" class="hide" style="background-color: lightgray;">
+            <div class="btn-close-modal-registrar">
+              <button id="close-modal"><img class="fechar-modal-img" src="../images/icons/close.png"
+                  alt="Botão fechar"></button>
+            </div>
+            <form action="#" method="get" target="_self">
+              <div class="modal-body">
+                <div class="field">
+                  <label class="label">Nome e sobrenome</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Digite nome e sobrenome">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Nome de usuário</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Digite o nome do usuário">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="password">
+                  <label class="label">Senha</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="password" placeholder="Digite sua senha" id="password">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <div id="icon" onclick="showHide()"></div>
+
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label" style="margin-top:12px;">Email</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="email" placeholder="Digite o email para cadastro">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field has-text-dark">
+                  <label class="checkbox">
+                    <div class="checkbox-termos">
+
+                      <input type="checkbox">
+                      <h5>ACEITO RECEBER EMAIL COM NEWSLETTER SOBRE O SITE. ESTOU DE ACORDO COM A POLÍTICA DE COOKIES.
+                      </h5>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="field is-grouped is-justify-content-center">
+                  <div class="control">
+                    <button class="button is-link">Cadastrar</button>
+                  </div>
+                  <div class="control">
+                    <button class="button is-link is-light" onclick="fecharFormulario()">Cancelar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <button class="button has-background-link-light has-text-white" id="open-login-modal">LOGIN</button>
+          <div id="fade-login" class="hide-login"></div>
+          <div id="modal-login" class="hide-login" style="background-color: lightgray;">
+            <div class="btn-close-modal-logar">
+              <button id="close-login-modal"><img class="fechar-modal-img" src="../images/icons/close.png"
+                  alt="Botão fechar"></button>
+            </div>
+            <form action="#" method="get" target="_self">
+              <div class="modal-body">
+                <div class="field">
+                  <label class="label">Nome de usuário</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Digite o nome do usuário">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="password">
+                  <label class="label">Senha</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="password" placeholder="Digite sua senha" id="password-login">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <div id="icon-login" onclick="showHideLogin()">
+                    </div>
+
+
+                  </div>
+                </div>
+
+                <div class="field is-grouped is-justify-content-center" style="margin-top: 15px;">
+                  <div class="control">
+                    <button class="button is-link">Login</button>
+                  </div>
+                  <div class="control">
+                    <button class="button is-link is-light" onclick="fecharFormularioLogin()">Cancelar</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="input-mudar-tema">
+    <input type="checkbox" class="checkbox-mudar-tema" id="chk" />
+
+    <label class="label-mudar-tema" for="chk">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+      <div class="ball"></div>
+    </label>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+  </div>
+  <br>
+
+  <section class="formulario">
+    <div id="container">
+      <h1 class="is-uppercase has-text-weight-medium is-size-4">Qual modelo de carro elétrico combina com você?</h1>
+
+    </div>
+    <br>
+    <div class="card">
+
+      <form id="quizForm">
+
+        <div>
+          <label>1- Você já possui um carro elétrico?</label><br>
+          <input type="radio" name="possui_carro" value="sim"> Sim<br>
+          <input type="radio" name="possui_carro" value="nao"> Não<br>
+          <label>Se sim, qual?</label><br>
+          <input type="text" name="qual_carro" placeholder="Digite aqui">
+        </div>
+        <br>
+
+        <div>
+          <label>2- Quais são os fatores que te influenciam na compra de um carro elétrico?</label><br>
+          <input type="radio" name="fatores_influencia" value="economiacombustivel"> Economia de combustível<br>
+          <input type="radio" name="fatores_influencia" value="impactoambiental"> Impacto ambiental<br>
+          <input type="radio" name="fatores_influencia" value="desempenho"> Desempenho<br>
+          <input type="radio" name="fatores_influencia" value="incentivofiscal"> Incentivos fiscais
+        </div>
+        <br>
+
+        <div>
+          <label>3- Quais são os fatores que te incentivam a não comprar um carro elétrico?</label><br>
+          <input type="radio" name="fatores_desincentivo" value="custo"> Custo<br>
+          <input type="radio" name="fatores_desincentivo" value="bateria"> Autonomia da bateria<br>
+          <input type="radio" name="fatores_desincentivo" value="infraestrutura"> Infraestrutura (pontos de recarga)<br>
+          <input type="radio" name="fatores_desincentivo" value="tempo"> Tempo de recarga
+        </div>
+        <br>
+
+        <div>
+          <label>4- Qual a sua principal fonte de informação sobre carros elétricos?</label><br>
+          <input type="radio" name="fonte_informacao" value="internet"> Internet (redes sociais, jornais virtuais,
+          sites)<br>
+          <input type="radio" name="fonte_informacao" value="revistas"> Revistas sobre o assunto<br>
+          <input type="radio" name="fonte_informacao" value="amigos"> Amigos e/ou familiares<br>
+          <input type="radio" name="fonte_informacao" value="concessionarias"> Concessionárias<br>
+          <input type="radio" name="fonte_informacao" value="propagandas"> Propagandas
+        </div>
+        <br>
+
+        <div>
+          <label>5- Você conhece as políticas governamentais de incentivo à compra de carros elétricos?</label><br>
+          <input type="radio" name="conhece_politicas" value="sim"> Sim<br>
+          <input type="radio" name="conhece_politicas" value="nao"> Não
+        </div>
+        <br>
+
+        <div>
+          <label>6- Qual a probabilidade de você comprar um carro elétrico?</label><br>
+          <input type="radio" name="probabilidade_compra" value="alta"> Alta<br>
+          <input type="radio" name="probabilidade_compra" value="media"> Média<br>
+          <input type="radio" name="probabilidade_compra" value="baixa"> Baixa
+        </div>
+        <br>
+
+        <div>
+          <label>7- Qual é seu estilo de direção?</label><br>
+          <input type="radio" name="estilo_direcao" value="calmo"> Calmo<br>
+          <input type="radio" name="estilo_direcao" value="equilibrado"> Equilibrado<br>
+          <input type="radio" name="estilo_direcao" value="esportivo"> Esportivo
+        </div>
+        <br>
+
+        <div>
+          <label>8- Com qual frequência você usa o seu carro?</label><br>
+          <input type="radio" name="frequencia_uso" value="diaadia"> Deslocamento para trabalho e compromissos do dia a
+          dia<br>
+          <input type="radio" name="frequencia_uso" value="viagens"> Viagens<br>
+          <input type="radio" name="frequencia_uso" value="usoconstante"> Uso constante
+        </div>
+        <br>
+
+        <div>
+          <label>9- Qual a sua prioridade para escolher um carro?</label><br>
+          <input type="radio" name="prioridade" value="economia"> Economia de combustível<br>
+          <input type="radio" name="prioridade" value="desempenho"> Desempenho<br>
+          <input type="radio" name="prioridade" value="conforto"> Conforto<br>
+          <input type="radio" name="prioridade" value="sustentabilidade"> Sustentabilidade
+        </div>
+        <br>
+
+        <div>
+          <label>10- Qual tamanho de carro você prefere?</label><br>
+          <input type="radio" name="tamanho_carro" value="pequeno"> Pequeno<br>
+          <input type="radio" name="tamanho_carro" value="medio"> Médio<br>
+          <input type="radio" name="tamanho_carro" value="grande"> Grande
+        </div>
+        <br>
+
+        <div>
+          <label>11- Quantas pessoas você costuma transportar no carro?</label><br>
+          <input type="radio" name="quantidade_pessoas" value="uma"> Apenas eu<br>
+          <input type="radio" name="quantidade_pessoas" value="tres"> 1 a 3 pessoas<br>
+          <input type="radio" name="quantidade_pessoas" value="cinco"> 3 a 5 pessoas<br>
+          <input type="radio" name="quantidade_pessoas" value="mais"> Mais de 5 pessoas
+        </div>
+        <br>
+
+        <div>
+          <label>12- Você tem acesso a pontos de recarga perto de casa e/ou trabalho?</label><br>
+          <input type="radio" name="acesso_recarga" value="sim"> Sim<br>
+          <input type="radio" name="acesso_recarga" value="nao"> Não
+        </div>
+        <br>
+
+        <div>
+          <label>13- Marque as opções que são indispensáveis em um carro para você:</label><br>
+          <input type="checkbox" name="tecnologias" value="gps"> Sistema GPS<br>
+          <input type="checkbox" name="tecnologias" value="wifi"> Conectividade Wi-Fi<br>
+          <input type="checkbox" name="tecnologias" value="carregamento"> Carregamento rápido<br>
+          <input type="checkbox" name="tecnologias" value="assistencia"> Serviços de assistência ao motorista<br>
+          <input type="checkbox" name="tecnologias" value="seguranca"> Segurança<br>
+          <label>Outros:</label><br>
+          <input type="text" name="tecnologias_outros" placeholder="Digite aqui">
+        </div>
+        <br>
+
+        <div>
+          <label>14- Qual seu orçamento para um carro elétrico?</label><br>
+          <input type="radio" name="orcamento" value="ate100000"> Até R$100.000,00<br>
+          <input type="radio" name="orcamento" value="100000a250000"> R$100.000,00 a R$250.000,00<br>
+          <input type="radio" name="orcamento" value="acima250000"> Acima de R$250.000,00
+        </div>
+        <br>
+
+        <div>
+          <label>15- Com que frequência você troca de carro?</label><br>
+          <input type="radio" name="frequencia_troca" value="menos2anos"> Menos de 2 anos<br>
+          <input type="radio" name="frequencia_troca" value="2a5anos"> 2 a 5 anos<br>
+          <input type="radio" name="frequencia_troca" value="mais5anos"> Mais de 5 anos
+        </div>
+        <br>
+
+        <div>
+          <label>16- Você estaria disposto a investir em uma estação de recarga doméstica?</label><br>
+          <input type="radio" name="investir_estacao" value="sim"> Sim<br>
+          <input type="radio" name="investir_estacao" value="nao"> Não
+        </div>
+        <br>
+
+        <div>
+          <label>17- Qual é a faixa etária dos principais motoristas do carro?</label><br>
+          <input type="radio" name="faixa_etaria" value="ate25"> Até 25 anos<br>
+          <input type="radio" name="faixa_etaria" value="25a40"> 25 a 40 anos<br>
+          <input type="radio" name="faixa_etaria" value="40a60"> 40 a 60 anos<br>
+          <input type="radio" name="faixa_etaria" value="mais60"> Mais de 60 anos
+        </div>
+        <br>
+
+        <div>
+          <label>18- Você está disposto a comprar um carro de importação direta?</label><br>
+          <input type="radio" name="importacao_direta" value="sim"> Sim<br>
+          <input type="radio" name="importacao_direta" value="nao"> Não
+        </div>
+        <br>
+
+        <div>
+          <label>19- Qual é a importância de um bom sistema de entretenimento no carro para você?</label><br>
+          <input type="radio" name="importancia_entretenimento" value="muitoimportante"> Muito importante<br>
+          <input type="radio" name="importancia_entretenimento" value="importante"> Importante<br>
+          <input type="radio" name="importancia_entretenimento" value="poucoimportante"> Pouco importante<br>
+          <input type="radio" name="importancia_entretenimento" value="naoimportante"> Não é importante
+        </div>
+        <br>
+
+        <div>
+          <label>20- Você considera comprar um carro usado?</label><br>
+          <input type="radio" name="carro_usado" value="sim"> Sim<br>
+          <input type="radio" name="carro_usado" value="nao"> Não<br>
+          <input type="radio" name="carro_usado" value="talvez"> Talvez
+        </div>
+        <br>
+
+
+        <input class="bt" type="submit" name="enviar" value="Enviar formulário">
+        <input class="bt-limpar" type="reset" name="limpar" value="Limpar formulário">
+
+
+
+      </form>
+
+      <div id="resultado"></div>
+  </section>
+  </div>
+  <br>
+  <br>
+
+  <footer class="footer has-background-black has-text-white">
+    <div class="content has-text-centered">
+      <p>
+        <strong class="has-text-primary">Eletric GO</strong> por Felipe Mendes, Isabela Câmara, Lucas Fernandes, Natália
+        Rocha e Ítalo Eduardo.<br>
+        O código fonte é licenciado por
+        <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>. O conteúdo do site é
+        licenciado por
+        <strong class="has-text-primary">BYTA BUG LTDA</strong>.
+      </p>
+      <a href="sobre.html">
+        <img src="../images/sobre-removebg-preview.png" alt="Botão Sobre" style="width: 100px; height: 40px;">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const chk = document.getElementById('chk');
+
+    chk.addEventListener('change', () => {
+      document.body.classList.toggle('grey')
+    });
+    const changeLogo = () => {
+      const logosOriginal = document.querySelectorAll('.logo-original');
+      const logosAlternate = document.querySelectorAll('.logo-alternate');
+      const mq = window.matchMedia('(max-width: 750px)');
+
+      const changeLogo = () => {
+        if (mq.matches) {
+          logosOriginal.forEach(logo => logo.style.display = 'none');
+          logosAlternate.forEach(logo => logo.style.display = 'block');
+        } else {
+          logosOriginal.forEach(logo => logo.style.display = 'block');
+          logosAlternate.forEach(logo => logo.style.display = 'none');
+        }
+      };
+
+      changeLogo();
+
+      mq.addEventListener('change', changeLogo);
+    };
+
+    changeLogo();
+
+    // Função para abrir e fechar o modal de registro
+    const toggleRegisterModal = () => {
+      const modal = document.querySelector("#modal");
+      const fade = document.querySelector("#fade");
+      [modal, fade].forEach((el) => el.classList.toggle("hide"));
+    };
+
+    // Função para mostrar e ocultar a senha no modal de registro
+    const togglePasswordVisibility = () => {
+      const password = document.getElementById('password');
+      const icon = document.getElementById('icon');
+      if (password.type === 'password') {
+        password.setAttribute('type', 'text');
+        icon.classList.add('hide');
+      } else {
+        password.setAttribute('type', 'password');
+        icon.classList.remove('hide');
+      }
+    };
+
+    // Função para fechar o modal de registro
+    const closeRegisterModal = () => {
+      const modal = document.querySelector("#modal");
+      const fade = document.querySelector("#fade");
+      [modal, fade].forEach((el) => el.classList.add("hide"));
+    };
+
+    // Função para abrir e fechar o modal de login
+    const toggleLoginModal = () => {
+      const modalLogin = document.querySelector("#modal-login");
+      const fadeLogin = document.querySelector("#fade-login");
+      [modalLogin, fadeLogin].forEach((el) => el.classList.toggle("hide-login"));
+    };
+
+    // Função para mostrar e ocultar a senha no modal de login
+    const toggleLoginPasswordVisibility = () => {
+      const passwordLogin = document.getElementById('password-login');
+      const iconLogin = document.getElementById('icon-login');
+      if (passwordLogin.type === 'password') {
+        passwordLogin.setAttribute('type', 'text');
+        iconLogin.classList.add('hide');
+      } else {
+        passwordLogin.setAttribute('type', 'password');
+        iconLogin.classList.remove('hide');
+      }
+    };
+
+    // Função para fechar o modal de login
+    const closeLoginModal = () => {
+      const modalLogin = document.querySelector("#modal-login");
+      const fadeLogin = document.querySelector("#fade-login");
+      [modalLogin, fadeLogin].forEach((el) => el.classList.add("hide-login"));
+    };
+
+    // Event Listeners
+    document.querySelector("#open-modal").addEventListener("click", toggleRegisterModal);
+    document.querySelector("#close-modal").addEventListener("click", closeRegisterModal);
+    document.querySelector("#icon").addEventListener("click", togglePasswordVisibility);
+
+    document.querySelector("#open-login-modal").addEventListener("click", toggleLoginModal);
+    document.querySelector("#close-login-modal").addEventListener("click", closeLoginModal);
+    document.querySelector("#icon-login").addEventListener("click", toggleLoginPasswordVisibility);
+
+    document.getElementById('quizForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const estiloDirecao = form.estilo_direcao.value;
+      const frequenciaUso = form.frequencia_uso.value;
+      const prioridade = form.prioridade.value;
+      const tamanhoCarro = form.tamanho_carro.value;
+      const quantidadePessoas = form.quantidade_pessoas.value;
+      const acessoRecarga = form.acesso_recarga.value;
+      const tecnologias = Array.from(form.querySelectorAll('input[name="tecnologias"]:checked')).map(input => input.value);
+      const tecnologiasOutros = form.tecnologias_outros.value;
+
+      let resultado = 'Baseado nas suas respostas, um carro elétrico que combina com você seria:<br>';
+
+      if (estiloDirecao === 'calmo') {
+        resultado += '- Para um estilo de direção calmo, recomendamos o Nissan Leaf.<br>';
+      } else if (estiloDirecao === 'equilibrado') {
+        resultado += '- Para um estilo de direção equilibrado, o Chevrolet Bolt pode ser uma ótima escolha.<br>';
+      } else if (estiloDirecao === 'esportivo') {
+        resultado += '- Se você prefere um estilo de direção mais esportivo, considere o Tesla Model 3.<br>';
+      }
+
+      if (frequenciaUso === 'diaadia') {
+        resultado += '- Para deslocamentos diários, um Nissan Leaf seria uma excelente opção.<br>';
+      } else if (frequenciaUso === 'viagens') {
+        resultado += '- Se você faz muitas viagens, o Tesla Model S pode ser o carro ideal para você.<br>';
+      } else if (frequenciaUso === 'usoconstante') {
+        resultado += '- Se você usa o carro constantemente, um Chevrolet Bolt pode atender às suas necessidades.<br>';
+      }
+
+      if (prioridade === 'economia') {
+        resultado += '- Se a economia de combustível é sua prioridade, o Renault Zoe pode ser a escolha certa.<br>';
+      } else if (prioridade === 'desempenho') {
+        resultado += '- Para quem busca desempenho, o Audi e-tron pode ser uma excelente opção.<br>';
+      } else if (prioridade === 'conforto') {
+        resultado += '- Se conforto é fundamental para você, considere o Jaguar I-PACE.<br>';
+      } else if (prioridade === 'sustentabilidade') {
+        resultado += '- Se sustentabilidade é sua prioridade, o BMW i3 pode ser o carro ideal para você.<br>';
+      }
+
+      if (tamanhoCarro === 'pequeno') {
+        resultado += '- Para quem prefere carros pequenos, o Renault Zoe pode ser uma escolha inteligente.<br>';
+      } else if (tamanhoCarro === 'medio') {
+        resultado += '- Para um tamanho médio, o Nissan Leaf pode ser uma excelente opção.<br>';
+      } else if (tamanhoCarro === 'grande') {
+        resultado += '- Se você precisa de espaço, considere o Tesla Model X, um carro grande e espaçoso.<br>';
+      }
+
+      if (quantidadePessoas === 'uma') {
+        resultado += '- Se costuma transportar apenas você, um Renault Zoe pode ser suficiente para suas necessidades.<br>';
+      } else if (quantidadePessoas === 'tres') {
+        resultado += '- Para transportar até 3 pessoas, o Nissan Leaf pode ser uma escolha versátil e eficiente.<br>';
+      } else if (quantidadePessoas === 'cinco') {
+        resultado += '- Se você costuma transportar de 3 a 5 pessoas, considere um Tesla Model S, que oferece conforto e espaço.<br>';
+      } else if (quantidadePessoas === 'mais') {
+        resultado += '- Se você costuma transportar mais de 5 pessoas, o Tesla Model X pode ser o carro ideal para você, com suas opções de assentos extras.<br>';
+      }
+
+      if (acessoRecarga === 'sim') {
+        resultado += '- Se você tem acesso a pontos de recarga perto de casa e/ou trabalho, um Nissan Leaf pode ser conveniente para você.<br>';
+      } else if (acessoRecarga === 'nao') {
+        resultado += '- Se não tem acesso a pontos de recarga, considere um Tesla Model S, que oferece uma excelente autonomia de bateria.<br>';
+      }
+
+      resultado += 'Tecnologias indispensáveis: <br>';
+      if (tecnologias.includes('gps')) {
+        resultado += '- Para sistema GPS, recomendamos o Tesla Model 3.<br>';
+      }
+      if (tecnologias.includes('wifi')) {
+        resultado += '- Para conectividade Wi-Fi, considere o Audi e-tron.<br>';
+      }
+      if (tecnologias.includes('carregamento')) {
+        resultado += '- Para sistema de carregamento rápido, o Hyundai Kona Elétrico é uma excelente escolha.<br>';
+      }
+      if (tecnologias.includes('autonomia')) {
+        resultado += '- Para autonomia de bateria superior, o Tesla Model S é altamente recomendado.<br>';
+      }
+      if (tecnologias.includes('assistente')) {
+        resultado += '- Para assistente de estacionamento, considere o BMW i3.<br>';
+      }
+      if (tecnologiasOutros) {
+        resultado += 'Outras tecnologias: ' + tecnologiasOutros + '.<br>';
+      }
+
+      document.getElementById('resultado').innerHTML = resultado;
+    });
+
+  </script>
+
+</body>
+
+</html>

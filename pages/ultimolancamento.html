@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../images/icons/grid_icon.ico" type="image/x-icon">
+    <title>Último Lançamento da Tesla</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/ultimolancamento.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
+</head>
+
+
+<body class="full-background">
+    <div class="container">
+        <div class="content">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class="slide first">
+                        <img src="../images/2025-Tesla-Model-3-Performance-423-901-e1713971883234.webp" alt="imagem1">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/2025-Tesla-Model-3 preto.webp" alt="imagem2">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/2025-Tesla-Model-3 vermelho.webp" alt="imagem3">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/2025-Tesla-Model interior.webp" alt="imagem4">
+                    </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+
+                    </div>
+                </div>
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+            <div class="text-container has-text-white">
+                <h3 class="has-text-weight-medium has-text-white is-size-3">Tesla model 3 Performance</h3>
+                <p>A Tesla revelou todos os detalhes do novo Model 3 Performance, a única que faltava após a atualização
+                    do
+                    modelo. A versão esportiva
+                    acompanha as inovações, principalmente estéticas, do modelo base, mas ganha um considerável aumento
+                    de
+                    potência e equipamentos que deixarão o carro de Elon Musk ainda mais empolgane.</p>
+                <p>Começando pelo design, é preciso estar atento aos detalhes para diferenciar o Model 3 Performance do
+                    modelo
+                    padrão. Como excluisividade, o esportivo ganha um novo para-choque dianteiro com pequenas entradas
+                    de ar nas
+                    extremidades e um discreto spoiler na traseira. Há também novo divisor dianteiro e difusor traseiro,
+                    e rodas
+                    de aro 20 forjadas para reduzir peso. As mudanças são poucas, mas a Tesla afirma que foram o
+                    suficiente para
+                    reduzir o arrasto em 5% e a sustentação em 36%.</p>
+                <p>A marca atualizou os motores elétricos para chegar ao "carro diário e de alto desempenho perfeito".
+                    No geral,
+                    a potencia contínua foi aumentada em 22% e o pico de potência subiu 32%. Já o pico de torque está
+                    16% maior,
+                    enquanto o consumo de energia caiu 2% e o modelo conseguiu manter os 476 de autonomia</p>
+                <p>Isso significa que agora os dois motores elétricos(um em cada eixo) entregam juntos 517cv, logo o
+                    tempo d 0 a
+                    96km/h cai para 2,9 segundos, com uma velocidade maxima de 262km/h</p>
+                <h3 class="has-text-weight-medium has-text-white is-size-4">A partir de US$42.490</h3>
+            </div>
+            <footer>
+                <a class="nav-item" href="grid.html">
+                    <img src="../images/voltar-btn.png" alt="Botão Voltar"
+                        style="width: 100px; height: 100px; margin-bottom: 10px;">
+                </a>
+            </footer>
+            <script>
+                let count = 1;
+                document.getElementById("radio1").checked = true;
+
+                setInterval(function () {
+                    nextImage();
+                }, 2000);
+
+                function nextImage() {
+                    count++;
+                    if (count > 4) {
+                        count = 1;
+                    }
+
+                    document.getElementById("radio" + count).checked = true;
+                }
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

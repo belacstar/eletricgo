@@ -1,0 +1,128 @@
+.sobre-section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.titulo-sobre {
+  background: linear-gradient(to left, #ffffff, #021c78);
+  width: 220px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+  color: #fff;
+  font-size: 25px;
+}
+
+.titulo-sobre h1 {
+  margin-left: 10px;
+}
+
+.card {
+  width: 350px;
+  margin: 0.45rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card:hover {
+  z-index: 10;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.media {
+  display: flex;
+  align-items: center;
+}
+
+.media-left {
+  margin-right: 1rem;
+}
+
+.media-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title.is-4 {
+  margin-bottom: 0.5rem;
+}
+
+.subtitle.is-6 {
+  margin-bottom: 1rem;
+}
+
+.content {
+  margin-top: 1rem;
+}
+
+.content a {
+  color: #3273dc;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.content a img {
+  margin-right: 0.5rem;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.centralizar-botao-sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-link {
+  margin-left: 0;
+}
+
+
+
+
+@media (max-width: 750px) {
+  .sobre-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .card {
+    width: 90%;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .media-left figure {
+    width: 48px;
+    height: 48px;
+    margin: 0;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+
+}

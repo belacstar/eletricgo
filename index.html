@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" href="./images/icons/logo-eg-preta-icon.ico" type="image/x-icon">
+  <title>EletricGo</title>
+  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <script defer src="./script.js"></script>
+</head>
+
+<body>
+
+  <header class="header has-background-black is-uppercase has-text-weight-medium has-text-white">
+    <div class="nav-header">
+      <a href="index.html" class="logo">
+        <img class="logo-original" src="./images/logo_eletricgo-rmvback.png" alt="Logo EletricGo">
+        <img class="logo-alternate" src="./images/logo-eg-removebg-preview.png" alt="Logo EletricGo">
+      </a>
+      <a class="nav-item" href="index.html">
+        Home
+      </a>
+
+      <a class="nav-item" href="./pages/tabela.html">
+        Tabela
+      </a>
+
+      <a class="nav-item" href="./pages/grid.html">
+        Grid
+      </a>
+
+      <a class="nav-item" href="./pages/formulario.html">
+        Formulário
+      </a>
+
+      <a class="nav-item" href="./pages/mapasClicaveis.html">
+        Mapas Clicáveis
+      </a>
+
+      <a class="nav-item" href="./pages/landingPage.html">
+        Landing Page
+      </a>
+
+
+
+      <div class="btn-register-login">
+        <div class="buttons">
+          <button class="button is-primary has-text-white" id="open-modal">CADASTRAR</button>
+          <div id="fade" class="hide"></div>
+          <div id="modal" class="hide" style="background-color: lightgray;">
+            <div class="btn-close-modal-registrar">
+              <button id="close-modal"><img class="fechar-modal-img" src="./images/icons/close.png"
+                  alt="Botão fechar"></button>
+            </div>
+            <form action="#" method="get" target="_self">
+              <div class="modal-body">
+                <div class="field">
+                  <label class="label">Nome e sobrenome</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Digite nome e sobrenome">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Nome de usuário</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Digite o nome do usuário">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="password">
+                  <label class="label">Senha</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="password" placeholder="Digite sua senha" id="password">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <div id="icon" onclick="showHide()"></div>
+
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label" style="margin-top:12px;">Email</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="email" placeholder="Digite o email para cadastro">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field has-text-dark">
+                  <label class="checkbox">
+                    <div class="checkbox-termos">
+
+                      <input type="checkbox">
+                      <h5>ACEITO RECEBER EMAIL COM NEWSLETTER SOBRE O SITE. ESTOU DE ACORDO COM A POLÍTICA DE COOKIES.
+                      </h5>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="field is-grouped is-justify-content-center">
+                  <div class="control">
+                    <button class="button is-link">Cadastrar</button>
+                  </div>
+                  <div class="control">
+                    <button class="button is-link is-light" onclick="closeRegisterModal()">Cancelar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <button class="button has-background-link-light has-text-white" id="open-login-modal">LOGIN</button>
+          <div id="fade-login" class="hide-login"></div>
+          <div id="modal-login" class="hide-login" style="background-color: lightgray;">
+            <div class="btn-close-modal-logar">
+              <button id="close-login-modal"><img class="fechar-modal-img" src="./images/icons/close.png"
+                  alt="Botão fechar"></button>
+            </div>
+            <form action="#" method="get" target="_self">
+              <div class="modal-body">
+                <div class="field">
+                  <label class="label">Nome de usuário</label>
+                  <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Digite o nome do usuário">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="password">
+                  <label class="label">Senha</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="password" placeholder="Digite sua senha" id="password-login">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                    <div id="icon-login" onclick="showHideLogin()">
+                    </div>
+
+
+                  </div>
+                </div>
+
+                <div class="field is-grouped is-justify-content-center" style="margin-top: 15px;">
+                  <div class="control">
+                    <button class="button is-link">Login</button>
+                  </div>
+                  <div class="control">
+                    <button class="button is-link is-light" onclick="closeRegisterModal()">Cancelar</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="input-mudar-tema">
+    <input type="checkbox" class="checkbox-mudar-tema" id="chk" />
+
+    <label class="label-mudar-tema" for="chk">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+      <div class="ball"></div>
+    </label>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+  </div>
+  <br>
+  <br>
+
+  <div class="index-container">
+
+    <a href="./pages/ferrari296gtb.html" class="card-link">
+      <h1
+        class="has-background-primary-100 has-text-primary-100-invert has-text-weight-medium is-size-3 has-text-centered">
+        Conheça a Ferrari 296 GTB</h1>
+      <div class="index-div1-01">
+        <div class="gallery">
+          <div class="gallery-container">
+            <img class="gallery-item gallery-item-1" src="images/ferrari-296-gtb-jc-5-1160x653.jpg" alt="Ferrari"
+              data-index="1">
+            <img class="gallery-item gallery-item-2" src="images/ferrari.webp" alt="Ferrari" data-index="2">
+            <img class="gallery-item gallery-item-3" src="images/1-Ferrari-296-GTB.jpg" alt="Ferrari" data-index="3">
+            <img class="gallery-item gallery-item-4" src="images/ferrari-296-gtb-1920-2.webp" alt="Ferrari"
+              data-index="4">
+            <img class="gallery-item gallery-item-5" src="images/fer.webp" alt="Ferrari" data-index="5">
+          </div>
+          <div class="gallery-controls"></div>
+          <br>
+        </div>
+
+      </div>
+    </a>
+
+    <div class="index-div1-01">
+      <a href="./pages/grid.html" class="card-link">
+        <section class="card slides-image">
+          <div class="slide-titulo">
+            <h2 class="title has-text-grey-dark is-uppercase is-size-4">Veja a história dos carros elétricos!</h2>
+
+          </div>
+
+          <div class="slider-index">
+
+            <div class="slides-index">
+              <input class="slides-index-input" type="radio" name="radio-btn-index" id="radio-index-1">
+              <input class="slides-index-input" type="radio" name="radio-btn-index" id="radio-index-2">
+              <input class="slides-index-input" type="radio" name="radio-btn-index" id="radio-index-3">
+              <input class="slides-index-input" type="radio" name="radio-btn-index" id="radio-index-4">
+
+              <div class="slide-index-first">
+                <img class="img-index-slide" src="./images/triciclo eletrico.jpeg" alt="Primeiro Triciclo Elétrico">
+              </div>
+
+              <div class="slide-index">
+                <img class="img-index-slide" src="./images/primeiro carro eletrico da volvo.avif" alt="Volvo Elétrico">
+              </div>
+
+              <div class="slide-index">
+                <img class="img-index-slide" src="./images/novo-volvo-ex30-2024---fotos-do-lancamento-ao-vivo.webp"
+                  alt="Novo Volvo">
+              </div>
+
+              <div class="slide-index">
+                <img class="img-index-slide" src="./images/1.avif" alt="Volvo">
+              </div>
+
+              <div class="navigation-auto-index">
+                <div class="auto-index-btn1"></div>
+                <div class="auto-index-btn2"></div>
+                <div class="auto-index-btn3"></div>
+                <div class="auto-index-btn4"></div>
+              </div>
+            </div>
+
+            <div class="manual-index-navigation">
+              <label for="radio-index-1" class="manual-index-btn"></label>
+              <label for="radio-index-2" class="manual-index-btn"></label>
+              <label for="radio-index-3" class="manual-index-btn"></label>
+              <label for="radio-index-4" class="manual-index-btn"></label>
+            </div>
+
+          </div>
+
+        </section>
+      </a>
+
+      <a href="./pages/landingPage.html" class="card-link">
+        <section class="quiz-carros-eletricos">
+          <div class="cardconteudo">
+            <div class="cardconteudo-details">
+              <p class="text-title">SEAL</p>
+              <p class="text-body">BYD</p>
+              <figure>
+                <img src="./images/bydlogo.png" class="logotext" style="width: 72px; height: 44px;">
+              </figure>
+              <figure>
+                <img src="./images/bydseal.webp">
+              </figure>
+            </div>
+            <a href="./pages/landingPage.html" target="_blank">
+              <button class="cardconteudo-button">Acessar <img src="./images/icons/arrow-right.svg"></button>
+            </a>
+          </div>
+        </section>
+      </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="index-div1">
+      <a href="./pages/tabela.html" class="card-link">
+        <section class="tabela-carros-eletricos">
+          <div class="tabela-comparativa">
+            <div class="titulo-tabela">
+              <h2 class="has-text-white is-uppercase">
+                Acesse a tabela completa de comparação dos principais modelos de carros elétricos</h2>
+            </div>
+            <img src="./images/parte_tabela.jpeg" alt="Tabela">
+          </div>
+        </section>
+      </a>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="index-div1">
+      <a href="./pages/mapasClicaveis.html" class="card-link">
+        <section class="pontos-recarga">
+          <div class="pontos">
+            <img class="pontos-carga" src="./images/mobilidade-eletrica-scaled.jpeg" alt="Ponto Recarga">
+            <img src="./images/1-Rastreador-removebg-preview.png" alt="Rastreador" style="width: 250px; height: 250px;">
+          </div>
+
+        </section>
+      </a>
+
+      <a href="./pages/formulario.html" class="card-link">
+        <section class="quiz-carros-eletricos">
+          <div class="quiz-carros">
+            <img src="./images/quizZ-Photoroom.png" alt="Quiz" class="logotext animated-image" style="width: 400px;">
+          </div>
+        </section>
+      </a>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+
+
+  <footer class="footer has-background-black has-text-white">
+    <div class="content has-text-centered">
+      <p>
+        <strong class="has-text-primary">Eletric GO</strong> por Felipe Mendes, Isabela Câmara, Lucas Fernandes, Natália
+        Rocha e Ítalo Eduardo.<br>
+        O código fonte é licenciado pela universidade
+        <a href="https://www.fumec.br" target="_blank">FUMEC</a>. O conteúdo do site é licenciado por
+        <strong class="has-text-primary">BYTA BUG LTDA</strong>.
+      </p>
+      <a href="./pages/sobre.html">
+        <img src="./images/sobre-removebg-preview.png" alt="Botão Sobre" style="width: 100px; height: 40px;">
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

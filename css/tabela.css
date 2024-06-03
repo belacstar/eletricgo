@@ -1,0 +1,166 @@
+/* estilo tabela */
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
+body {
+  background-color: #232c35;
+  color: white;
+  height: 100%;
+  transition: background-color 0.2s linear;
+}
+
+body.grey {
+  background: #d1d0d0e4;
+  color: #333;
+}
+
+.input-mudar-tema {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.checkbox-mudar-tema {
+  opacity: 0;
+  position: absolute;
+}
+
+.label-mudar-tema {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+}
+
+.label-mudar-tema .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox-mudar-tema:checked+.label-mudar-tema .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.conteudo {
+  margin: 25px;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 87%;
+}
+
+.conteudo p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  color: white;
+}
+
+.conteudo ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.conteudo li {
+  margin-bottom: 10px;
+}
+
+.conteudo .titulo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.conteudo-tabela {
+  margin: 25px;
+}
+
+.conteudo-tabela table {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.conteudo-tabela th,
+.conteudo-tabela td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.conteudo-tabela thead {
+  background-color: #f2f2f2;
+}
+
+.footer {
+  padding: 20px 0;
+}
+
+.hide {
+  display: none;
+}
+
+.hide-login {
+  display: none;
+}
+
+#tabela td{
+  color: #000;
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .conteudo-tabela {
+    overflow-x: auto;
+  }
+
+  .conteudo-tabela table {
+    width: 100%;
+    display: block;
+  }
+
+  .conteudo-tabela thead,
+  .conteudo-tabela tbody,
+  .conteudo-tabela th,
+  .conteudo-tabela td,
+  .conteudo-tabela tr {
+    display: block;
+    background-color: #fff; 
+  }
+
+  .conteudo-tabela tr {
+    display: table-row;
+  }
+
+  .conteudo-tabela th,
+  .conteudo-tabela td {
+    display: table-cell;
+  }
+}
