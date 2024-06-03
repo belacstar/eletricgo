@@ -631,5 +631,8 @@ h1.has-text-centered {
         max-width: 60%;
     }
 
+    h1 {
+        max-width: 100%;
+    }
 
 }
